@@ -1,49 +1,33 @@
-//DNA stats header
+/*
+Emilee mason
+ID# 2321064
+emmason@chapman.edu
+CPSC 350-01
+Assignment 1: C++ Review
+
+DnaStats.h
+This is the header file of the DnaStats class. This file defines all of the methods,
+member variables, as well as call of the the right libraries that will be needed
+for the implementation file.
+*/
 #include <iostream>
 #include <fstream>
 #include <algorithm>
+#include <math.h>
 using namespace std;
 
 class DnaStats{
 
   public:
-/*    int GetLineNumber();
-    void SetLineNumber(int NewLineNumber);
-    int GetLetterNumber();
-    void SetLetterNumber(int NewLetterNumber);*/
-    int GetTotalCountA();
-    void SetTotalCountA(int NewCountA);
-    int GetTotalCountT();
-    void SetTotalCountT(int NewCountT);
-    int GetTotalCountC();
-    void SetTotalCountC(int NewCountC);
-    int GetTotalCountG();
-    void SetTotalCountG(int NewCountG);
-    double GetTotalLines();
-    int GetTotalLetterCount();
-    void SetTotalLetterCount(int NewTotalLetter);
-    double GetTotalBigramCount();
-    void SetTotalBigramCount(double NewTotalBigram);
-    double GetProbOfNucleotideA();
-    void SetProbOfNucleotideA(double NewProbOfA);
-    double GetProbOfNucleotideT();
-    void SetProbOfNucleotideT(double NewProbOfT);
-    double GetProbOfNucleotideC();
-    void SetProbOfNucleotideC(double NewProbOfC);
-    double GetProbOfNucleotideG();
-    void SetProbOfNucleotideG(double NewProbOfG);
+    bool ProcessFile;
 
-
-//methods/constructors
     DnaStats();
     void RunDnaStats(DnaStats *MyDna, string FileName, string Line);
-    bool RunAgain();
-
+    string GetNewFileName();
 
   private:
 //counted variables
-  //  bool ProcessFile; //whether to continue through while loop again
-    double TotalLines; //total lines in file
+    double TotalLines;
     double TotalCountA;
     double TotalCountT;
     double TotalCountC;
@@ -65,15 +49,14 @@ class DnaStats{
     double TotalCountBigramGT;
     double TotalCountBigramGC;
     double TotalCountBigramGG;
-
-  //  int TotalLetterCount; //sum of letters in file
     double TotalBigramCount; //all bigrams in file
+
 //caculated variables
     double SumDnaLetters;
     double MeanDnaLetters;
     double VarianceDnaLetters;
     double StandardDeviationDnaLetters;
-    //guassian ????
+
     double ProbOfNucleotideA;
     double ProbOfNucleotideC;
     double ProbOfNucleotideG;
@@ -96,24 +79,22 @@ class DnaStats{
     double ProbOfBigramGC;
     double ProbOfBigramGG;
 
-
-
-
     ifstream OpenReader(string FileName);
-  //  void CloseReader(ifstream Reader);
     ofstream OpenWriter(string FileName);
-    //void CloseWriter(ofstream Writer);
     ofstream OpenAppender(string FileName);
-    //void CloseAppender(ofstream Appender);
+
+    void RunAgain();
+
     void PrintDnaInfo(string NewFileName);
-    void PrintGaussian();
+    void PrintCalculations(string NewFileName);
+    void PrintGaussian(string NewFileName);
+    char LetterGivenProbs();
 
     double IterateFileLines(string FileName, string Line);
     double IterateLineLetters(string Line);
     void LetterCount(char DnaLetter);
     void BigramCheck(string DnaLine, int index);
     void BigramCount(char CurrentLetter, char NextLetter);
-
 
 //calculations
     void AllCalculations(string FileName);
@@ -123,12 +104,6 @@ class DnaStats{
     void CalcProbabilities();
     void CalcNucleotidesProb();
     void CalcBigramProbs();
-    void CalcGaussian();
-
-
-
-
-
-
+    int CalcGaussian();
 
 };

@@ -1,30 +1,29 @@
-//main file for Dnastats
+/*
+Emilee mason
+ID# 2321064
+emmason@chapman.edu
+CPSC 350-01
+Assignment 1: C++ Review
+
+main.cpp
+This is the main file for the DnaStats class. This runs all the implementation
+created in the DnaStats.cpp class. It also contains a while loop to continue
+processing through each new file name given.
+*/
 #include "DnaStats.h"
 
 int main(int argc, char** argv){
-  string DnaLine; //for each individual line of DNA from the reader
-  int LineNumber = 0;
-  string FileName = argv[1];
-  bool ProcessFile = true;
-  DnaStats *DNAStats;
-  string UserInput;
+  string DnaLine;             //for each individual line of DNA from the reader
+  string FileName = argv[1];  //to start off the program with right file name
+  DnaStats *DNAStats;         //to have a pointer to a new object each time.
 
-//while(ProcessFile){
-  cout << "Let's start by grabing the " << FileName << " file." << endl;
-  DNAStats = new DnaStats();
-  DNAStats->RunDnaStats(DNAStats, FileName, DnaLine);
-
-
-  cout << "Total Lines: " << DNAStats->GetTotalLines() << endl;
-  cout << "Total bigram: " << DNAStats->GetTotalBigramCount() << endl;
-  cout << "Prob A: " << DNAStats->GetProbOfNucleotideA() << endl;
-  cout << "Prob T: " << DNAStats->GetProbOfNucleotideT() << endl;
-
-/* //test if you want to do through file again
-  ProcessFile = RunAgain();
-*/
-//} //end of while loop
-
+//for looping through the process for each new file name
+  while(DNAStats->ProcessFile){
+    cout << "Let's start by grabing the " << FileName << " file." << endl;
+    DNAStats = new DnaStats();
+    DNAStats->RunDnaStats(DNAStats, FileName, DnaLine);
+    FileName = DNAStats->GetNewFileName();
+  } //end of while loop
   delete DNAStats;
   return 0;
 };
