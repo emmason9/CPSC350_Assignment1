@@ -1,18 +1,19 @@
 # CPSC350_Assignment1
 This is Assignment 1 for the Data Structures and Algorithms class. (DnaStats)
 
-1) Identifying info 
-	a) Emilee Mason
-	b) ID# 2321064 
-	c) email:  emmason@chapman.edu
-	d) CPSC 350 - 01
-	e) Assignment 1: c++ review? 
+1) Identifying info	
+	1) Emilee Mason
+	2) ID# 2321064
+	3) email: emmason@chapman.edu
+	4) CPSC 350 - 01
+	5) Assignment 1: C++ Review
 
 2) List all source files submitted for assignment 
-	a) DnaStats.h //header file 
-	b) DnaStats.cpp //implementation file, has most if not all of the code
-	c) main.cpp //runs the code
-
+	1) DnaStats.h // header file
+	2) DnaStats.cpp // implementation file, has most if not all the functionality of the code
+	3) main.cpp // runs the code
+	4) Makefile //compiles and cleans the folder
+	
 3) Description of any bugs/errors:
 (I have a couple things to address, I'm sorry)
 I made methods that open and return fstream things (like Reader, Writer, and Appender) but for some reason I kept 
