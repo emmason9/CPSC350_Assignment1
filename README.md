@@ -2,16 +2,16 @@
 This is Assignment 1 for the Data Structures and Algorithms class. (DnaStats)
 
 1) Identifying info 
-a) Emilee Mason
-b) ID# 2321064 
-c) email:  emmason@chapman.edu
-d) CPSC 350 - 01
-e) Assignment 1: c++ review? 
+	a) Emilee Mason
+	b) ID# 2321064 
+	c) email:  emmason@chapman.edu
+	d) CPSC 350 - 01
+	e) Assignment 1: c++ review? 
 
 2) List all source files submitted for assignment 
-a) DnaStats.h //header file 
-b) DnaStats.cpp //implementation file, has most if not all of the code
-c) main.cpp //runs the code
+	a) DnaStats.h //header file 
+	b) DnaStats.cpp //implementation file, has most if not all of the code
+	c) main.cpp //runs the code
 
 3) Description of any bugs/errors:
 (I have a couple things to address, I'm sorry)
@@ -36,7 +36,7 @@ to happen? But it does?
 4) List of references:
 Overall,
 cplusplus.com
-tutorialspoint.com (these two helpped me understand the all the syntax/basics of c++)
+tutorialspoint.com (these two helped me understand the all the syntax/basics of c++)
 stackoverflow.com (troubleshooting the specific problems/errors I was getting)
 
 Here are some more specific code structures I looked at to fix some weird bugs or problems I couldn't solve on my own:
@@ -53,17 +53,18 @@ Kinda pointed me in the right direction, but I don't think I completely understa
 
 https://www.educba.com/math-functions-in-c-plus-plus/
 http://www.cplusplus.com/reference/cmath/log/
-These helpped me with some math Functions in C++.
+These helped me with some math Functions in C++.
 
 https://stackoverflow.com/questions/31089952/using-rand-rand-max-1
-Helpped me understand how to get a double out of the rand() function.
+Helped me understand how to get a double out of the rand() function.
 
 5) Instructions for running Assignment: (with some docker instructions cause why not)
 	1) Grab file from GitHub, unzip it(if needed), and place it within a docker accessible location
 	2) Open up powershell or terminal and start up your docker container
 		(ie, docker start [container], docker attach [container])
 	3) cd to the file (should be labeled CPSC350_Assignment1)
+		a) Make sure the text files you want to analyze are in the same folder as the cpp files!
 	4) "make all"
-	5) "./Assignment1"
+	5) "./Assignment1 [fileName].txt"
 	6) Follow instructions given by code.
 
